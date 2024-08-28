@@ -35,15 +35,15 @@ export const sendEmail = async ({
   try {
     const { data, error } = await resend.emails.send({
       from: marketing
-        ? "Marc from Papermark <marc@ship.papermark.io>"
+        ? "Kyle from Hicontrast <kyle@updates.hicontrast.design>"
         : system
-          ? "Papermark <system@papermark.io>"
+          ? "Hicontrast <kyle@updates.hicontrast.design>"
           : !!scheduledAt
-            ? "Marc Seitz <marc@papermark.io>"
-            : "Marc from Papermark <marc@papermark.io>",
+            ? "Kyle Winton <kyle@updates.hicontrast.design>"
+            : "Kyle from Hicontrast <kyle@updates.hicontrast.design>",
       to: test ? "delivered@resend.dev" : to,
       cc: cc,
-      replyTo: marketing ? "marc@papermark.io" : undefined,
+      replyTo: marketing ? "kyle@updates.hicontrast.design" : undefined,
       subject,
       react,
       scheduledAt,
