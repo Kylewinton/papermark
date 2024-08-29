@@ -38,17 +38,17 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return PostHogMiddleware(req);
   }
 
-  if (
-    (process.env.NODE_ENV === "development" && host?.includes(".local")) ||
-    (process.env.NODE_ENV !== "development" &&
-      !(
-        host?.includes("localhost") ||
-        host?.includes("hicontrast.design") ||
-        host?.endsWith(".vercel.app")
-      ))
-  ) {
-    return DomainMiddleware(req);
-  }
+  // if (
+  //   (process.env.NODE_ENV === "development" && host?.includes(".local")) ||
+  //   (process.env.NODE_ENV !== "development" &&
+  //     !(
+  //       host?.includes("localhost") ||
+  //       host?.includes("hicontrast.design") ||
+  //       host?.endsWith(".vercel.app")
+  //     ))
+  // ) {
+  //   return DomainMiddleware(req);
+  // }
 
   if (!path.startsWith("/view/")) {
     return AppMiddleware(req);
