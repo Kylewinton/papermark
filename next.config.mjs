@@ -61,7 +61,7 @@ function prepareRemotePatterns() {
     patterns.push({
       // production vercel blob
       protocol: "https",
-      hostname: "papermark-blob.public.blob.vercel-storage.com",
+      hostname: "8apwk5kcxgjsbt4n.public.blob.vercel-storage.com",
     });
   }
 
@@ -72,7 +72,7 @@ function prepareRemotePatterns() {
     patterns.push({
       // staging vercel blob
       protocol: "https",
-      hostname: "papermark-blob.public.blob.vercel-storage.com",
+      hostname: "8apwk5kcxgjsbt4n.public.blob.vercel-storage.com",
     });
   }
 

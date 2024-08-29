@@ -43,7 +43,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     (process.env.NODE_ENV !== "development" &&
       !(
         host?.includes("localhost") ||
-        host?.includes("papermark.io") ||
+        host?.includes("hicontrast.design") ||
         host?.endsWith(".vercel.app")
       ))
   ) {

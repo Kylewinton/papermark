@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 
 import { TeamProvider } from "@/context/team-context";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 import PlausibleProvider from "next-plausible";
@@ -18,6 +19,7 @@ import { EXCLUDED_PATHS } from "@/lib/constants";
 import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const queryClient = new QueryClient();
 
 export default function App({
   Component,
@@ -86,7 +88,9 @@ export default function App({
                   ) : (
                     <TeamProvider>
                       <TriggerCustomProvider>
-                        <Component {...pageProps} />
+                        <QueryClientProvider client={queryClient}>
+                          <Component {...pageProps} />
+                        </QueryClientProvider>
                       </TriggerCustomProvider>
                     </TeamProvider>
                   )}

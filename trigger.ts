@@ -1,7 +1,7 @@
 import { TriggerClient } from "@trigger.dev/sdk";
 
 export const client = new TriggerClient({
-  id: "papermark-dev-Ojwu",
+  id: "papermark-Mh7w",
   apiKey: process.env.TRIGGER_API_KEY,
   apiUrl: process.env.TRIGGER_API_URL,
 });
@@ -15,7 +15,7 @@ export function getTriggerClient(): TriggerClient | null {
   }
 
   const client = new TriggerClient({
-    id: "papermark-dev-Ojwu",
+    id: "papermark-Mh7w",
     apiKey: process.env.TRIGGER_API_KEY,
     apiUrl: process.env.TRIGGER_API_URL,
   });
